@@ -1,6 +1,6 @@
 # Learn Redux
 
-A simple React + Redux implementation following [Learn Redux Tutorial](https://learnredux.com "Learn Redux Tutorial")
+A simple React + Redux implementation following [Learn Redux Tutorial](https://learnredux.com "Learn Redux Tutorial").
 
 ## Running
 
