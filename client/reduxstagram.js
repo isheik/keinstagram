@@ -23,5 +23,4 @@ const router = (
     </Router>
 )
 
-
 render(router, document.getElementById('root'));
