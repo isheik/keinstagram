@@ -14,7 +14,9 @@ const defaultState = {
     comments
 };
 
+// Initialize each reducer's state. defState has to be the same shape as combine reducer keys
 const store = createStore(rootReducer, defaultState);
+console.log(defaultState.posts);
 
 export const history = syncHistoryWithStore(browserHistory, store);
 
