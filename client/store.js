@@ -14,10 +14,20 @@ const defaultState = {
     comments
 };
 
+const enhancers = compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
 // Initialize each reducer's state. defState has to be the same shape as combine reducer keys
-const store = createStore(rootReducer, defaultState);
-console.log(defaultState.posts);
+const store = createStore(rootReducer, defaultState, enhancers);
 
 export const history = syncHistoryWithStore(browserHistory, store);
+
+if(module.hot) {
+    module.hot.accept('./reducers/', () => {
+        const nextRootReducer = require('./reducers/index').default;
+        store.replaceReducer(nextRootReducer);
+    })
+}
 
 export default store;

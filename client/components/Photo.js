@@ -13,11 +13,11 @@ const Photo = React.createClass({
                         <img src={post.display_src} alt={post.caption} className="grid-photo" />
                     </Link>
 
-                <CSSTransitionGroup transitionName="like" 
-                    transitionEnterTimeout={500}
-                    transitionLeaveTimeout={500}>
-                    <span key={post.likes} className="likes-heart">{post.likes}</span>
-                </CSSTransitionGroup>
+                    <CSSTransitionGroup transitionName="like" 
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={500}>
+                        <span key={post.likes} className="likes-heart">{post.likes}</span>
+                    </CSSTransitionGroup>
                 </div>
 
                 <figcaption>

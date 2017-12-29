@@ -4,6 +4,7 @@ import Comments from './Comments';
 
 const Single = React.createClass({
     render() {
+        /* params are objects contain postId from reduxstagram.js... :name means that object name */
         const { postId } = this.props.params;
         const i = this.props.posts.findIndex((post) => post.code === postId);
         const post = this.props.posts[i];
@@ -13,7 +14,7 @@ const Single = React.createClass({
         return (
             <div className="single-photo">
                 <Photo i={i} post={post} {...this.props} />
-                <Comments postComments={postComments}/>
+                <Comments postComments={postComments} {...this.props}/>
             </div>
         )
     }
